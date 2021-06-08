@@ -1,0 +1,19 @@
+
+<h1>Rerenciador de usuários</h1>
+<h2>Login</h2>
+
+<%= form_with url: "/user/login", method: :post do |form| %>
+  <div class="container">
+    <label>User</label><br>
+    <input class="input" name="user">
+  </div>
+  <div class="container">
+    <label>Email</label><br>
+    <input class="input" name="email">
+  </div>
+  <div class="container">
+    <a href="<%= request.base_url %>/user/register">Cadastrar-se</a>
+    <input class="input" type="submit">
+  </div>
+</form>
+<% end %>

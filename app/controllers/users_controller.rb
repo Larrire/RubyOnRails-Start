@@ -10,21 +10,21 @@ class UsersController < ApplicationController
       {:name=>'lucas', :email=>'lucas@gmail.com'},
       {:name=>'matheus', :email=>'matheus@gmail.com'},
     ]
-  end#initialize
+  end
 
-  def index(data = nil)
-    if( !data.nil? )
-      @users.push({:name=>data['user'], :email=>data['email']})
-    end
+  def index
     render 'site/users/index'
   end
 
+  def register
+
+  end
+
   def create
-    render 'site/users/create'
+    render 'users/create'
   end
 
   def store
     data = request.params
-    self.index(data)
   end
 end
