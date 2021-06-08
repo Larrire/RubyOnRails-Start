@@ -1,0 +1,13 @@
+<%= form_with url: "#{request.base_url}/user/store", method: :post do |form| %>
+  <div class="container">
+    <label>User</label>
+    <input name="user" >
+  </div>
+  <div class="container">
+    <label>Email</label>
+    <input name="email" >
+  </div>
+  <div class="container">
+    <input type="submit" >
+  </div>
+<% end %>

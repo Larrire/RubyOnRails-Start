@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag 'opa', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<h1>Opa</h1>
+
+<div class="container">
+  <button alert="weewewee">Click me</button>
+</div>
+
+
+<%= form_with url: "/formdata", method: :post do |form| %>
+  <div class="container">
+    <label>User</label>
+    <input name="user">
+  </div>
+  <div class="container">
+    <label>Email</label>
+    <input name="email">
+  </div>
+  <div class="container">
+    <input type="submit">
+  </div>
+</form>
+<% end %>
+
+<%= javascript_pack_tag 'opa', 'data-turbolinks-track': 'reload' %>
